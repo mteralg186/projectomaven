@@ -33,16 +33,14 @@
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.1</version> <!-- Usa una versión moderna del plugin -->
+            <version>3.8.1</version> <!-- Asegúrate de tener una versión reciente -->
             <configuration>
-                <source>11</source> <!-- Especifica Java 11 -->
-                <target>11</target> <!-- Especifica Java 11 -->
+                <source>1.7</source>
+                <target>1.7</target>
             </configuration>
         </plugin>
     </plugins>
 </build>
-
-  <build
 
   <dependencyManagement>
     <dependencies>
