@@ -7,19 +7,19 @@
         <groupId>com.example.maven-project</groupId>
         <artifactId>maven-project</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath>../pom.xml</relativePath> <!-- Relative path to the parent POM -->
     </parent>
 
-    <artifactId>webapp</artifactId>
-    <packaging>war</packaging>
-    <name>Webapp Module</name>
+    <artifactId>server</artifactId>
+    <packaging>jar</packaging>
+    <name>Server Module</name>
 
     <dependencies>
         <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>5.0.0</version>
-            <scope>provided</scope>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
