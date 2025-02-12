@@ -7,38 +7,41 @@
         <groupId>com.example.maven-project</groupId>
         <artifactId>maven-project</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>  <!-- Apunta al archivo raíz -->
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>webapp</artifactId>
     <packaging>war</packaging>
     <name>Web Application</name>
-    <description>Module that serves the web application</description>
+    <description>Webapp for the Maven project</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.servlet.jsp</groupId>
+            <artifactId>jakarta.jsp-api</artifactId>
+            <version>2.3.3</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
     <build>
-        <finalName>${project.artifactId}</finalName>
-
-        <!-- Configuración del plugin para Java 11 -->
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-        <!-- Dependencias de servidor de aplicaciones y API web -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-        </dependency>
-    </dependencies>
 
 </project>
