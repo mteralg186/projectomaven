@@ -19,7 +19,8 @@
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
             <version>5.0.0</version>
-            <scope>provided</scope>
+            <scope>provided</scope> <!-- Esto asegura que no se empaquete con el WAR, ya que el contenedor de servlets la proporciona -->
+
         </dependency>
     </dependencies>
 </project>
